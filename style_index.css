@@ -1,0 +1,174 @@
+
+:root {
+    --bg-dark: #060b1a;
+    --accent-blue: #00d4ff;
+    --nav-height: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- Navigation Header --- */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    background: rgba(6, 11, 26, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 60px; /* Restored to original visible size */
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+/* --- Hero Image (Full Visibility Layout) --- */
+.companyimage-container {
+    padding-top: calc(var(--nav-height) + 20px);
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-reveal {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    
+    /* Animation */
+    opacity: 0;
+    animation: slideUpFade 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.main-lab-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the second image is NEVER cut off */
+}
+
+/* --- Bottom Links Section --- */
+.quick-links-section {
+    padding: 60px 5%;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.link-col {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.link-col:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.link-col h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* --- Electric Blue Button Glow --- */
+.btn-glow {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #00d4ff;
+    color: #00d4ff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease; /* Smoothly fades the glow in/out */
+    background: transparent;
+}
+
+/* The "Glow" happens on hover */
+.btn-glow:hover {
+    background: rgba(0, 212, 255, 0.1); /* Subtle blue tint inside */
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px #00d4ff, 0 0 40px rgba(0, 212, 255, 0.4);
+    transform: translateY(-3px); /* Lifts the button slightly */
+}
+
+
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    .links-row {
+        flex-direction: column;
+    }
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
