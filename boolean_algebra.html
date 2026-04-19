@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIVOT VLSI | Boolean algebra</title>
+    <link rel="stylesheet" href="boolean_algebra.css">
+</head>
+<body class="teaser-body">
+    <header class="glass-nav">
+        <nav>
+            <div class="logo-box">
+                <img src="company_logo.png" alt="PIVOT Logo" class="nav-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="solver-container">
+
+        <section class="control-card">
+            <button id="roll-btn" class="piv-btn primary">Generate Problem</button>
+        </section>
+        <div class="random-container">
+                <span id="number-display"></span>
+        </div>
+        <section class="glass-card scratch-section">
+            <textarea id="scratch-space" placeholder="Use this space for your work..."></textarea>
+        </section>
+        <section class="glass-card logic-card">
+            <div class="input-group">
+                <input type="text" id="minterm-input" placeholder="ENTER YOUR ANSWER HERE AS SOP">
+            </div>
+            
+            <button id="check-btn" class="piv-btn accent">
+                Check Result
+            </button>
+
+            <div class="feedback-area">
+                <span id="result_validation" class="status-msg"></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="boolean_algebra.js"></script>
+</body>
+</html>

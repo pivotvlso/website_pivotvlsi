@@ -1,0 +1,160 @@
+body {
+    background-color: #060b1a;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.तर्कावरणम् {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: none;
+    border: none;
+    text-align: center;
+}
+
+शीर्षक {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #1e293b;
+    font-size: 1.2rem;
+}
+
+th {
+    background-color: #1e293b;
+    color: #00d4ff;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+.प्रारम्भस्थितिप्रत्यावर्तनम् {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #ff4b2b;
+    color: #ff4b2b;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.प्रारम्भस्थितिप्रत्यावर्तनम्:hover {
+    background: #ff4b2b;
+    color: white;
+}
+
+.सम्पादनीयकोष्ठकम् {
+    /* Override browser defaults */
+    background-color: rgba(0, 212, 255, 0.05) !important; 
+    color: #00d4ff !important;
+    /* Ensure the cursor is visible */
+    caret-color: #00d4ff; 
+    /* Remove the default white outline/border when clicking */
+    outline: none; 
+    border: 1px solid #1e293b;
+    min-width: 60px;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Make it glow slightly when the user clicks to type */
+.सम्पादनीयकोष्ठकम्:focus {
+    background-color: rgba(0, 212, 255, 0.15) !important;
+    box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+/* The "+" Button Styling */
+.संयोगपुटम् {
+    width: 100%;
+    padding: 8px;
+    background-color: #28a745; /* Success Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.संयोगपुटम्:hover {
+    background-color: #218838;
+}
+
+th[draggable="true"] {
+    cursor: move;
+    user-select: none;
+    transition: background 0.3s ease;
+    border: 1px solid #1e293b;
+}
+
+th[draggable="true"]:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Style for the 'dragging' state */
+th:active {
+    cursor: grabbing;
+}
+
+.no-drag {
+    cursor: default;
+}
+
+.स्तम्भनिर्मूलनपुटम् {
+    background: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.स्तम्भनिर्मूलनपुटम्:hover {
+    background: #ff0000;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+/* Hide the control row headers' default styling */
+#control-row th {
+    border: none;
+    background: transparent;
+    padding-bottom: 5px;
+}
+
+.तर्कादानपात्रम् {
+    width: 100%;            /* Ensures it takes the full width available */
+    max-width: 600px;       /* Matches your table width */
+    margin-top: 20px;       /* Puts space between the table and the box */
+    text-align: center;
+}
+
+#तर्कादानम् {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #2980b9;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#तर्कादानम्:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
