@@ -10,9 +10,9 @@ const label = document.getElementById("number-display");
 //Math.floor(Math.random() * (max - min + 1)) + min
 document.getElementById("roll-btn").addEventListener("click", function() {
     द्विमीयपदम् = [];
-    चरसंख्या = 3;
-    पदसंख्या = 2;
-    //चरसंख्या = Math.floor(Math.random() * 3) + 4;
+    //चरसंख्या = 3;
+    //पदसंख्या = 2;
+    चरसंख्या = Math.floor(Math.random() * 3) + 4;
     if (चरसंख्या == 3){
         चरसरणी = ['A','B','C'];
     } else if (चरसंख्या == 4){
@@ -22,7 +22,7 @@ document.getElementById("roll-btn").addEventListener("click", function() {
     } else if (चरसंख्या == 6){
         चरसरणी = ['A','B','C','D','E','F'];
     }
-    //पदसंख्या = Math.floor(Math.random() * 6) + 4;
+    पदसंख्या = Math.floor(Math.random() * 6) + 4;
     for (र=0; र<पदसंख्या; र++) {
         पदम् = [];
         let अज्ञात = 0;
