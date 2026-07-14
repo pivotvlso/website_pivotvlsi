@@ -1,0 +1,128 @@
+
+/* --- Navigation Header --- */
+#शीर्षपट्टिका {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    background: rgba(6, 11, 26, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    padding : 5px;
+    box-sizing: border-box;
+}
+
+#चिह्नम् {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+#चिह्नम्:hover {
+    transform: scale(5);
+    transform-origin: top left;
+}
+
+#मार्गसञ्चारकडी {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#मार्गसञ्चारकडी a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#मार्गसञ्चारकडी a:hover {
+    color: yellow;
+    transform: translateY(-2px) scale(1.05); 
+    display: inline-block;
+}
+
+/* --- Coming Soon Page Styles --- */
+.प्रचार-शरीरम् {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060b1a;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.प्रचार-पात्रम् {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Animated Ring Effect */
+.दीप्ति-वलयः {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.दीप्ति-वलयः::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid #00d4ff;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.स्पन्दन-चिह्नम् {
+    font-size: 3rem;
+    color: #00d4ff;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(0.9); } }
+
+.प्रचार-शीर्षकम् {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.प्रचार-पाठः {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+
+.पृष्ठ-कुञ्जिका {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.पृष्ठ-कुञ्जिका:hover {
+    color: #00d4ff;
+}
