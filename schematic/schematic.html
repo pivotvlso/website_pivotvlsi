@@ -1,1 +1,119 @@
-avbcd
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIVOT VLSI | Schematic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="schematic.css">
+</head>
+
+<body>
+    <header id="शीर्षपट्टिका">
+
+        <div id="चिह्नपात्रम्">
+            <img src="../home_page/company_logo.png" alt="PIVOT Logo" id="चिह्नम्">
+        </div>
+        <ul id="मार्गसञ्चारकडी">
+            <li><a href="../home_page/index.html">Home</a></li>
+            <li><a href="../home_page/contact.html">Contact us</a></li>
+        </ul>
+    </header>
+
+    <!-- The new layout container -->
+    <div id="मुख्यपात्रम्">
+        <div id="उपकरणपट्टिका">
+            <button class="उपकरणकुञ्जिका" id="सामान्यकुञ्जिका" title="Normal (Esc)"><i
+                    class="fa-solid fa-arrow-pointer"></i></button>
+            <button class="उपकरणकुञ्जिका" id="प्रतिकृतिकुञ्जिका" title="Copy (C)"><i
+                    class="fa-solid fa-copy"></i></button>
+            <button class="उपकरणकुञ्जिका" id="शोधनकुञ्जिका" title="Delete (Del)">❌</button>
+            <button class="उपकरणकुञ्जिका" id="भ्रमणकुञ्जिका" title="Rotate 90° (R)"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="उपकरणकुञ्जिका" id="प्रतिबिम्बकुञ्जिका" title="Vertical Flip (V)"><i class="fa-solid fa-arrows-up-down"></i></button>
+            <button class="उपकरणकुञ्जिका" id="विस्तारकुञ्जिका" title="Zoom In (Z)"><i
+                    class="fa-solid fa-magnifying-glass-minus"></i></button>
+            <button class="उपकरणकुञ्जिका" id="संकोचकुञ्जिका" title="Zoom Out (Shift + Z)"><i
+                    class="fa-solid fa-magnifying-glass-plus"></i></button>
+            <input type="text" id="विस्तारप्रतिशतम्" value="100">
+            <span id="प्रतिशतचिह्नम्">%</span>
+            <button class="उपकरणकुञ्जिका" id="अनुकूलविस्तारकुञ्जिका" title="Zoom Fit (F)"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="कार्यक्षेत्रम्">
+            <div id="तर्कद्वारपट्टिका">
+                <button class="उपकरणकुञ्जिका" id="तन्तुकुञ्जिका" title="Wire (W)" draggable="true"><canvas
+                        id="तन्तुचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="कीलककुञ्जिका" title="Pin (P)"><canvas
+                        id="कीलकचिह्नम्" width="24" height="24"></canvas></button>
+                                <button class="उपकरणकुञ्जिका" id="संयोगद्वारकुञ्जिका" title="AND" draggable="true"><canvas
+                        id="संयोगद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विकल्पद्वारकुञ्जिका" title="OR" draggable="true"><canvas
+                        id="विकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नद्वारकुञ्जिका" title="NOT" draggable="true"><canvas
+                        id="नद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नसंयोगद्वारकुञ्जिका" title="NAND" draggable="true"><canvas
+                        id="नसंयोगद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नविकल्पद्वारकुञ्जिका" title="NOR" draggable="true"><canvas
+                        id="नविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विशिष्टविकल्पद्वारकुञ्जिका" title="XOR" draggable="true"><canvas
+                        id="विशिष्टविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विशिष्टनविकल्पद्वारकुञ्जिका" title="XNOR" draggable="true"><canvas
+                        id="विशिष्टनविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+            </div>
+            <div id="पट्टिकाविभाजकः"></div>
+            <div id="पटपात्रम्">
+                <div id="पटस्तरपात्रम्">
+                    <canvas id="बिन्दुपटः"></canvas>
+                    <canvas id="तर्कद्वारपटः"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pin Creation Dialog -->
+    <div id="कीलकसंवादपृष्ठभूमिः" class="संवादपृष्ठभूमिः गुप्तम्">
+        <div id="कीलकसंवादपेटिका" class="संवादपेटिका">
+            <h2>Create Pin</h2>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="कीलकनाम">Name:</label>
+                <input type="text" id="कीलकनाम" placeholder="e.g. IN1, CLK" maxlength="10" autocomplete="off">
+            </div>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="कीलकदिशा">Direction:</label>
+                <select id="कीलकदिशा">
+                    <option value="निवेशः">Input</option>
+                    <option value="निर्गमः">Output</option>
+                </select>
+            </div>
+            <div class="संवाद-कुञ्जिका-पङ्क्तिः">
+                <button id="कीलक_रद्दकुञ्जिका" class="संवाद-कुञ्जिका रद्द-कुञ्जिका">Cancel</button>
+                <button id="कीलक_स्वीकारकुञ्जिका" class="संवाद-कुञ्जिका स्वीकार-कुञ्जिका">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- Gate Creation Dialog -->
+    <div id="द्वारसंवादपृष्ठभूमिः" class="संवादपृष्ठभूमिः गुप्तम्">
+        <div id="द्वारसंवादपेटिका" class="संवादपेटिका">
+            <h2>Create Gate</h2>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="द्वारनाम">Name:</label>
+                <input type="text" id="द्वारनाम" placeholder="e.g. U1, U2" maxlength="10" autocomplete="off">
+            </div>
+            <div class="संवाद-कुञ्जिका-पङ्क्तिः">
+                <button id="द्वार_रद्दकुञ्जिका" class="संवाद-कुञ्जिका रद्द-कुञ्जिका">Cancel</button>
+                <button id="द्वार_स्वीकारकुञ्जिका" class="संवाद-कुञ्जिका स्वीकार-कुञ्जिका">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/schematic_globals.js"></script>
+    <script src="js/schematic_icons.js"></script>
+    <script src="js/schematic_routing.js"></script>
+    <script src="js/schematic_gates.js"></script>
+    <script src="js/schematic_events.js"></script>
+</body>
+
+</html>
