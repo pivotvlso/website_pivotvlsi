@@ -1,1 +1,140 @@
-abcd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIVOT VLSI | Digital Timing Diagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="timing_diagram.css">
+</head>
+<body class="शरीरम्">
+    <header id="शीर्षपट्टिका">
+        <div id="चिह्नपात्रम्">
+            <a href="../index.html">
+                <img src="../home_page/company_logo.png" alt="PIVOT Logo" id="चिह्नम्">
+            </a>
+        </div>
+        <ul id="मार्गसञ्चारकडी">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../home_page/contact.html">Contact us</a></li>
+        </ul>
+    </header>
+
+    <main class="मुख्यपात्रम्">
+        <div class="उपकरणपट्टिका">
+            <div class="विस्तारसमूहः">
+                <button class="उपकरणकीलः" id="सङ्कोचः" title="Zoom Out"><i class="fas fa-search-minus"></i></button>
+                <button class="उपकरणकीलः" id="वर्धनम्" title="Zoom In"><i class="fas fa-search-plus"></i></button>
+                <button class="उपकरणकीलः" id="दृश्यसमम्" title="Zoom Fit"><i class="fas fa-compress"></i></button>
+            </div>
+            <select class="समयमापकः" id="समयमापकः" title="Timescale Value">
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="100">100</option>
+                <option value="1000">1000</option>
+            </select>
+            <div class="विस्तारसमूहः">
+                <select class="समयैकम्" id="समयैकम्" title="Timescale Unit">
+                    <option value="s">s</option>
+                    <option value="ms">ms</option>
+                    <option value="us">us</option>
+                    <option value="ns" selected>ns</option>
+                    <option value="ps">ps</option>
+                    <option value="fs">fs</option>
+                </select>
+            </div>
+            <button class="उपकरणकीलः" id="सङ्केतयोजना" title="Add Signal"><i class="fas fa-plus"></i> Add Signal</button>
+            <div class="विस्तारसमूहः">
+                <input type="number" class="समयमापकः" id="तरङ्गायामः" value="10" title="Waveform Length Value">
+                <select class="समयैकम्" id="तरङ्गायामैकम्" title="Waveform Length Unit">
+                    <option value="s">s</option>
+                    <option value="ms">ms</option>
+                    <option value="us">us</option>
+                    <option value="ns" selected>ns</option>
+                    <option value="ps">ps</option>
+                    <option value="fs">fs</option>
+                </select>
+            </div>
+        </div>
+        <div class="खण्डसमूहः">
+            <div class="वामभागः" id="वामखण्डः">
+                <div class="शीर्षपट्टिका">Signal Name</div>
+            </div>
+            <div class="विभाजकः" id="विभाजकः"></div>
+            <div class="दक्षिणभागः" id="दक्षिणखण्डः">
+                <div class="कालरेखा" id="कालरेखा"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dialog Box for Add Signal (Prashna Petika) -->
+    <div class="आवरणम्" id="आवरणम्" style="display: none;">
+        <div class="प्रश्नपेटिका">
+            <h3>Add New Signal</h3>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="सङ्केतनाम">Signal Name:</label>
+                <input type="text" id="सङ्केतनाम" class="सङ्केतनिवेशः" placeholder="e.g. CLK">
+            </div>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="सङ्केtविस्तारः">Signal Width:</label>
+                <input type="number" id="सङ्केतविस्तारः" class="सङ्केतनिवेशः" placeholder="1" min="1">
+            </div>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="सङ्केतकालः">Signal Timescale:</label>
+                <input type="text" id="सङ्केतकालः" class="सङ्केतनिवेशः" placeholder="1ns">
+            </div>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="सङ्केतमूलम्">Signal Radix:</label>
+                <select id="सङ्केतमूलम्" class="सङ्केतनिवेशः">
+                    <option value="bin">Binary</option>
+                    <option value="oct">Octal</option>
+                    <option value="hex">Hexadecimal</option>
+                    <option value="dec">Decimal</option>
+                </select>
+            </div>
+            <div class="प्रश्ननिर्णयः">
+                <button class="उपकरणकीलः" id="त्यजकः">Cancel</button>
+                <button class="उपकरणकीलः" id="स्थापकः" style="background: var(--accent-blue); color: #060b1a;">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog Box for Edit Waveform Piece (Khanda Sampadaka) -->
+    <div class="आवरणम्" id="खण्डआवरणम्" style="display: none;">
+        <div class="प्रश्नपेटिका">
+            <h3>Edit Signal Piece</h3>
+            <div class="प्रश्नपङ्क्तिः">
+                <label>Signal:</label>
+                <div id="खण्डसङ्केतनाम" style="color: var(--accent-blue); font-weight: bold; font-family: monospace; font-size: 1.1rem;"></div>
+            </div>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="खण्डआरम्भः">Start Time:</label>
+                <input type="number" id="खण्डआरम्भः" class="सङ्केतनिवेशः" min="0" step="0.5">
+            </div>
+            <div class="प्रश्नपङ्क्तिः">
+                <label for="खण्डअन्तः">End Time:</label>
+                <input type="number" id="खण्डअन्तः" class="सङ्केतनिवेशः" min="0" step="0.5">
+            </div>
+            <div class="प्रश्नपङ्क्तिः" id="खण्डमूल्यक्षेत्रम्१बिट्">
+                <label for="खण्डमूल्यचयनम्">Value (1-bit):</label>
+                <select id="खण्डमूल्यचयनम्" class="सङ्केतनिवेशः">
+                    <option value="0">0 (Low)</option>
+                    <option value="1">1 (High)</option>
+                    <option value="x">X (Unknown)</option>
+                    <option value="z">Z (High-Z)</option>
+                </select>
+            </div>
+            <div class="प्रश्नपङ्क्तिः" id="खण्डमूल्यक्षेत्रम्बहुबिट्" style="display: none;">
+                <label for="खण्डमूल्यनिवेशनम्">Value (Bus):</label>
+                <input type="text" id="खण्डमूल्यनिवेशनम्" class="सङ्केतनिवेशः">
+            </div>
+            <div class="प्रश्ननिर्णयः">
+                <button class="उपकरणकीलः" id="खण्डत्यजकः">Cancel</button>
+                <button class="उपकरणकीलः" id="खण्डस्थापकः" style="background: var(--accent-blue); color: #060b1a;">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="timing_diagram.js"></script>
+</body>
+</html>
