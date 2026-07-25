@@ -1,0 +1,70 @@
+/* लेखन-अभ्यास-उपकरणस्य कृते CSS (CSS for Writing Practice Tool) */
+
+.सारणी-पात्रम् {
+    margin-top: 5px;
+    padding: 0 20px 20px 20px;
+    height: calc(100vh - 165px);
+    overflow-y: auto;
+}
+
+#अभ्याससारणी {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-glass);
+}
+
+#अभ्याससारणी td {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+}
+
+#अभ्याससारणी th {
+    background-color: #1e1e1e;
+    color: var(--text-primary);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#अभ्याससारणी td:first-child,
+#अभ्याससारणी th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: #1e1e1e;
+}
+
+#अभ्याससारणी th:first-child {
+    z-index: 15;
+}
+
+.अभ्यासनिवेशनम् {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.अभ्यासनिवेशनम्:focus {
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.उपकरणपट्टिका {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-glass);
+    display: flex;
+    align-items: center;
+}
+
+.error-input {
+    background-color: rgba(255, 77, 77, 0.3) !important;
+}
