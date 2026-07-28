@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!सर्वं_पूर्णम्) {
                 const container = document.getElementById('अभ्याससारणी-पात्रम्');
                 container.scrollTo({ top: प्रथम_त्रुटिः.offsetTop - (container.clientHeight / 2), behavior: 'smooth' });
-                प्रथम_त्रुटिः.focus();
+                प्रथम_त्रुटिः.focus({ preventScroll: true });
                 return; // Stop here if there are empty boxes
             }
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!सर्वं_सम्यक्) {
                 const container = document.getElementById('अभ्याससारणी-पात्रम्');
                 container.scrollTo({ top: प्रथम_त्रुटिः.offsetTop - (container.clientHeight / 2), behavior: 'smooth' });
-                प्रथम_त्रुटिः.focus();
+                प्रथम_त्रुटिः.focus({ preventScroll: true });
             } else {
                 // Everything is correct!
                 const उपकरणपट्टिका = document.querySelector('.उपकरणपट्टिका');
