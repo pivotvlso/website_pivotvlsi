@@ -1,0 +1,184 @@
+/* CSS for Conversion Tool */
+.समस्या-पट्टिका {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 30px;
+    background-color: var(--bg-glass, rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+}
+
+.उत्तर-पट्टिका {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.विकल्प-समूहः {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.विकल्प-सूची {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary, white);
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+}
+
+.विकल्प-सूची option {
+    background-color: #060b1a; /* Dark theme fallback */
+    color: white;
+}
+
+.समस्या-प्रदर्शनम् {
+    width: auto;
+}
+
+.समस्या-निवेशनम् {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+    border-radius: 4px;
+    color: var(--text-primary, white);
+    outline: none;
+}
+
+.समस्या-निवेशनम्:read-only {
+    color: var(--text-primary, white);
+    background-color: rgba(0, 212, 255, 0.05);
+}
+
+.कील-समूहः {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: auto;
+}
+
+.समस्या-पट्टिका .उपकरणकीलः {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+@keyframes ध्यानाकर्षण-स्पन्दन {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+}
+
+.ध्यानाकर्षणम् {
+    animation: ध्यानाकर्षण-स्पन्दन 0.5s ease-in-out 3;
+    background-color: var(--accent-blue, #00d4ff) !important;
+    color: #060b1a !important;
+}
+
+.रक्त-कीलः {
+    background-color: rgba(220, 53, 69, 0.8) !important;
+    color: white !important;
+}
+
+.उपकरणकीलः:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.सत्यता-सारणी-पात्रम् {
+    max-height: 250px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.सत्यता-सारणी-पात्रम् table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-glass, rgba(255, 255, 255, 0.05));
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+}
+
+.सत्यता-सारणी-पात्रम् th, .सत्यता-सारणी-पात्रम् td {
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+    color: var(--text-primary);
+}
+
+.सत्यता-सारणी-पात्रम् th {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    font-weight: bold;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.सत्यता-सारणी-पात्रम् tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.सत्यता-सारणी-निवेशनम् {
+    width: 80%;
+    padding: 4px;
+    font-size: 0.95rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass, rgba(255, 255, 255, 0.2));
+    border-radius: 4px;
+    color: var(--text-primary, white);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.सत्यता-सारणी-निवेशनम्:focus {
+    border-color: var(--accent-blue, #64B5F6);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.त्रुटि-प्रकाशः {
+    border-color: var(--error-red, #ff5252) !important;
+    background-color: rgba(255, 82, 82, 0.1) !important;
+}
+
+.साफल्य-प्रकाशः {
+    border-color: var(--success-green, #4caf50) !important;
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+.चयनित-विकल्पः {
+    color: #00e5ff !important;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
