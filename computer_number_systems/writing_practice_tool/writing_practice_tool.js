@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (!सर्वं_पूर्णम्) {
+                प्रथम_त्रुटिः.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 प्रथम_त्रुटिः.focus();
                 return; // Stop here if there are empty boxes
             }
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (!सर्वं_सम्यक्) {
+                प्रथम_त्रुटिः.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 प्रथम_त्रुटिः.focus();
             } else {
                 // Everything is correct!
