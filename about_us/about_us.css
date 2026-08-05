@@ -1,0 +1,247 @@
+:root {
+    --bg-dark: #060b1a;
+    --accent-blue: #00d4ff;
+    --nav-height: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- Navigation Header --- */
+#शीर्षपट्टिका {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    background: rgba(6, 11, 26, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#चिह्नम् {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+#चिह्नम्:hover {
+    transform: scale(5);
+    transform-origin: top left;
+}
+
+#मार्गसञ्चारकडी {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#मार्गसञ्चारकडी a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#मार्गसञ्चारकडी a:hover {
+    color: yellow;
+    transform: translateY(-2px) scale(1.05); 
+    display: inline-block;
+}
+
+/* --- About Us Specific --- */
+.about-main {
+    padding: 120px 5% 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* --- Mission and Vision --- */
+.mission-vision-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mv-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mv-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.mv-title {
+    color: var(--accent-blue);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.mv-text {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- Founder Section --- */
+.founder-section {
+    margin-top: 60px;
+    background: rgba(0, 212, 255, 0.03);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    text-align: left;
+}
+
+.founder-title {
+    color: var(--accent-blue);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.founder-image-placeholder {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: 2px solid var(--accent-blue);
+}
+
+.founder-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.founder-name {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.founder-bio {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.linkedin-btn {
+    display: inline-block;
+    background: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    background: #005582;
+    color: white;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #030610;
+    padding: 40px 5% 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #cbd5e1;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
