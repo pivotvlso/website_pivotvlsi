@@ -176,3 +176,100 @@ body {
         transform: translateY(0);
     }
 }
+
+/* --- Success Stories Section --- */
+.success-stories {
+    padding: 60px 5%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.success-stories h2 {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.testimonial-card h4 {
+    color: var(--accent-blue);
+    margin: 0;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #030610;
+    padding: 40px 5% 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #cbd5e1;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
