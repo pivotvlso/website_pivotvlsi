@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIVOT VLSI | Conversion Tool</title>
+    <title>Number System Conversion Tool | PIVOT VLSI</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Use PIVOT VLSI's interactive Number System Conversion Tool to easily convert and learn mathematical processes between Binary, Octal, Decimal, and Hexadecimal.">
+    <meta name="keywords" content="Number System Conversion, Binary, Octal, Decimal, Hexadecimal, VLSI, PIVOT VLSI, Interactive Tool">
+    <meta name="author" content="PIVOT">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Number System Conversion Tool | PIVOT VLSI">
+    <meta property="og:description" content="Interactive Number System Conversion Tool for Binary, Octal, Decimal, and Hexadecimal systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pivotvlsi.in/computer_number_systems/conversion_tool/conversion_tool.html">
+    <meta property="og:image" content="https://pivotvlsi.in/home_page/company_logo.png">
+    
+    <!-- Twitter Card Data -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pivotvlsi.in/computer_number_systems/conversion_tool/conversion_tool.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../timing_diagram.css">
     <link rel="stylesheet" href="conversion_tool.css">
 </head>
+
 <body class="शरीरम्">
     <header id="शीर्षपट्टिका">
         <div id="चिह्नपात्रम्">
@@ -22,7 +41,8 @@
     </header>
 
     <main class="मुख्यपात्रम्">
-        <h2 style="text-align: center; color: var(--text-primary); margin-bottom: 20px;">Number system conversion tool</h2>
+        <h1 style="text-align: center; color: var(--text-primary); margin-bottom: 20px; font-size: 1.5em; font-weight: bold;">Number system conversion tool
+        </h1>
         <div class="समस्या-पट्टिका">
             <div class="विकल्प-समूहः">
                 <select id="स्रोतः-प्रणाली" class="विकल्प-सूची">
@@ -41,62 +61,89 @@
                     <option value="16">Hexadecimal</option>
                 </select>
             </div>
-            
+
             <div class="समस्या-प्रदर्शनम्">
-                <input type="text" id="समस्या-मूल्यम्" class="समस्या-निवेशनम्" placeholder="Number to be converted" readonly>
+                <input type="text" id="समस्या-मूल्यम्" class="समस्या-निवेशनम्" placeholder="Number to be converted"
+                    readonly>
             </div>
-            
+
             <div class="कील-समूहः">
                 <button id="समस्या-सर्जन-कीलः" class="उपकरणकीलः"><i class="fas fa-random"></i> Generate problem</button>
-                <button id="ताला-कीलः" class="उपकरणकीलः" style="background-color: rgba(40, 167, 69, 0.8);"><i class="fas fa-unlock"></i> Lock</button>
+                <button id="ताला-कीलः" class="उपकरणकीलः" style="background-color: rgba(40, 167, 69, 0.8);"><i
+                        class="fas fa-unlock"></i> Lock</button>
             </div>
         </div>
-        
+
         <div class="उत्तर-पट्टिका">
-            <div id="नियन्त्रण-पङ्क्तिः" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px; width: 100%; margin-top: 20px; flex-wrap: wrap;">
-                <div id="विधि-चयनम्" style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="विधिः" value="mathematical" style="margin-right: 8px;"> Mathematical</label>
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="विधिः" value="grouping" style="margin-right: 8px;"> Grouping</label>
-                    <button id="अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled>Proceed <i class="fas fa-arrow-right"></i></button>
-                </div>
-                
-                <div id="गणितीय-विधि-चयनम्" style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="गणितीय-विधिः" value="multiplication" style="margin-right: 8px;"> Multiplication</label>
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="गणितीय-विधिः" value="division" style="margin-right: 8px;"> Division</label>
-                    <button id="गणितीय-अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled style="padding: 6px 12px; font-size: 1rem; display: none;">Proceed <i class="fas fa-arrow-right"></i></button>
+            <div id="नियन्त्रण-पङ्क्तिः"
+                style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px; width: 100%; margin-top: 20px; flex-wrap: wrap;">
+                <div id="विधि-चयनम्"
+                    style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="विधिः"
+                            value="mathematical" style="margin-right: 8px;"> Mathematical</label>
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="विधिः" value="grouping"
+                            style="margin-right: 8px;"> Grouping</label>
+                    <button id="अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled>Proceed <i
+                            class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <div id="समूहीकरण-विधि-चयनम्" style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="समूहीकरण-विधिः" value="substitution" style="margin-right: 8px;"> Substitution</label>
-                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="समूहीकरण-विधिः" value="extraction" style="margin-right: 8px;"> Extraction</label>
-                    <label id="intermediate-label" style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="समूहीकरण-विधिः" value="intermediate" id="intermediate-radio" style="margin-right: 8px;"> Intermediate Extraction and Substitute</label>
-                    <button id="समूहीकरण-अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled style="padding: 6px 12px; font-size: 1rem;">Proceed <i class="fas fa-arrow-right"></i></button>
+                <div id="गणितीय-विधि-चयनम्"
+                    style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="गणितीय-विधिः"
+                            value="multiplication" style="margin-right: 8px;"> Multiplication</label>
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="गणितीय-विधिः"
+                            value="division" style="margin-right: 8px;"> Division</label>
+                    <button id="गणितीय-अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled
+                        style="padding: 6px 12px; font-size: 1rem; display: none;">Proceed <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div id="समूहीकरण-विधि-चयनम्"
+                    style="display: none; justify-content: center; align-items: center; gap: 30px; color: var(--text-primary);">
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="समूहीकरण-विधिः"
+                            value="substitution" style="margin-right: 8px;"> Substitution</label>
+                    <label style="cursor: pointer; font-size: 1.1rem;"><input type="radio" name="समूहीकरण-विधिः"
+                            value="extraction" style="margin-right: 8px;"> Extraction</label>
+                    <label id="intermediate-label" style="cursor: pointer; font-size: 1.1rem;"><input type="radio"
+                            name="समूहीकरण-विधिः" value="intermediate" id="intermediate-radio"
+                            style="margin-right: 8px;"> Intermediate Extraction and Substitute</label>
+                    <button id="समूहीकरण-अग्रे-गच्छ-कीलः" class="उपकरणकीलः" disabled
+                        style="padding: 6px 12px; font-size: 1rem;">Proceed <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            
-            <div id="उत्तर-स्थानम्" style="width: 90%; max-width: 1000px; margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
-                <div id="गणितीय-सन्देशः" style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
-                    If there is decimal value to be converted or if any value shall be converted to decimal only, mathematical process needs to be followed
+
+            <div id="उत्तर-स्थानम्"
+                style="width: 90%; max-width: 1000px; margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
+                <div id="गणितीय-सन्देशः"
+                    style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
+                    If there is decimal value to be converted or if any value shall be converted to decimal only,
+                    mathematical process needs to be followed
                 </div>
-                
-                <div id="समूहीकरण-सन्देशः" style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
+
+                <div id="समूहीकरण-सन्देशः"
+                    style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
                     If there is no decimal value involved only, grouping process needs to be followed
                 </div>
 
-                <div id="समूहीकरण-त्रुटि-सन्देशः" style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
+                <div id="समूहीकरण-त्रुटि-सन्देशः"
+                    style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
                     <!-- Dynamic error message will be inserted here -->
                 </div>
 
-                <div id="गणितीय-त्रुटि-सन्देशः" style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
+                <div id="गणितीय-त्रुटि-सन्देशः"
+                    style="display: none; margin-top: 20px; width: 100%; justify-content: center; color: var(--accent-blue); font-size: 1.2rem; text-align: center;">
                     <!-- Dynamic error message will be inserted here -->
                 </div>
-                
-                <div id="गणन-पटलम्" style="display: flex; width: 100%; gap: 30px; margin-top: 20px; align-items: flex-start;">
-                    <div id="वाम-पटलम्" style="flex: 1; transition: all 0.5s ease; display: flex; flex-direction: column; align-items: center;">
+
+                <div id="गणन-पटलम्"
+                    style="display: flex; width: 100%; gap: 30px; margin-top: 20px; align-items: flex-start;">
+                    <div id="वाम-पटलम्"
+                        style="flex: 1; transition: all 0.5s ease; display: flex; flex-direction: column; align-items: center;">
                         <!-- Calculation Steps will go here -->
                     </div>
-                    
-                    <div id="दक्षिण-पटलम्" style="flex: 1; display: none; flex-direction: column; align-items: center; transition: all 0.5s ease;">
+
+                    <div id="दक्षिण-पटलम्"
+                        style="flex: 1; display: none; flex-direction: column; align-items: center; transition: all 0.5s ease;">
                         <div id="सत्यता-सारणी-पात्रम्" class="सत्यता-सारणी-पात्रम्" style="width: 100%;">
                             <!-- Truth table will be generated here -->
                         </div>
@@ -107,4 +154,5 @@
     </main>
     <script src="conversion_tool.js" charset="utf-8"></script>
 </body>
+
 </html>
