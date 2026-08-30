@@ -287,3 +287,89 @@ body.शरीरम् {
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #शीर्षपट्टिका {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    #मार्गसञ्चारकडी {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 5px;
+    }
+    
+    #मार्गसञ्चारकडी a {
+        font-size: 0.9rem;
+    }
+
+    .मुख्यपात्रम् {
+        margin-top: 80px;
+    }
+    
+    .समस्या-पट्टिका {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+        position: static;
+    }
+
+    .विकल्प-समूहः {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .विकल्प-समूहः i {
+        transform: rotate(90deg);
+        margin: 5px 0 !important;
+    }
+    
+    .विकल्प-सूची {
+        width: 100%;
+    }
+
+    .समस्या-निवेशनम् {
+        width: 100%;
+    }
+    
+    .कील-समूहः {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .उपकरणकीलः {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #नियन्त्रण-पङ्क्तिः {
+        flex-direction: column;
+        gap: 15px !important;
+    }
+    
+    #विधि-चयनम्, #गणितीय-विधि-चयनम्, #समूहीकरण-विधि-चयनम् {
+        flex-direction: column;
+        gap: 15px !important;
+        align-items: flex-start !important;
+    }
+    
+    #गणन-पटलम् {
+        flex-direction: column;
+        gap: 20px !important;
+    }
+    
+    #वाम-पटलम्, #दक्षिण-पटलम् {
+        width: 100%;
+    }
+    
+    .सत्यता-सारणी-पात्रम् {
+        overflow-x: auto;
+    }
+}
