@@ -150,5 +150,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    const faqButton = document.getElementById('faq-button');
+    if (faqButton) {
+        faqButton.addEventListener('click', function() {
+            const faqContainer = document.getElementById('faq-container');
+            const toolContainer = document.getElementById('अभ्याससारणी-पात्रम्');
+            const faqText = document.getElementById('faq-text');
+            const faqIcon = document.getElementById('faq-icon');
+            
+            if (faqContainer.style.display === 'none') {
+                faqContainer.style.display = 'block';
+                toolContainer.style.display = 'none';
+                faqText.textContent = 'Tool';
+                faqIcon.className = 'fas fa-wrench';
+            } else {
+                faqContainer.style.display = 'none';
+                toolContainer.style.display = 'block';
+                faqText.textContent = 'FAQ';
+                faqIcon.className = 'fas fa-question-circle';
+            }
+        });
+    }
 });
 

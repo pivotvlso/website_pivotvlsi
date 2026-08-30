@@ -173,3 +173,46 @@ body.शरीरम् {
 .त्रुटि-निवेशनम् {
     background-color: rgba(255, 77, 77, 0.3) !important;
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #शीर्षपट्टिका {
+        padding: 5px 10px;
+    }
+    
+    #मार्गसञ्चारकडी {
+        gap: 10px;
+        font-size: 0.85em;
+    }
+    
+    .उपकरणपट्टिका {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    #परीक्षणकीलः, #faq-button {
+        position: static !important;
+        width: 100%;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    #पृष्ठशीर्षकम् {
+        font-size: 1.2em !important;
+    }
+    
+    .सारणी-पात्रम् {
+        padding: 0 5px 10px 5px;
+    }
+    
+    #अभ्याससारणी th {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+    
+    .अभ्यासनिवेशनम् {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
