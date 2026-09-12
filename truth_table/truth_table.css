@@ -56,9 +56,8 @@ body {
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -68,9 +67,12 @@ body {
     border-radius: none;
     border: none;
     text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
-शीर्षक {
+.शीर्षक {
     width: 100%;
     border-collapse: collapse;
 }
@@ -87,7 +89,6 @@ th {
     position: relative;
     white-space: nowrap;
 }
-
 
 .प्रारम्भस्थितिप्रत्यावर्तनम् {
     margin-top: 20px;
@@ -210,4 +211,56 @@ th:active {
 #तर्कादानम्:focus {
     border-color: #3498db;
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #030610;
+    padding: 40px 5% 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    color: #00d4ff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #cbd5e1;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
 }
