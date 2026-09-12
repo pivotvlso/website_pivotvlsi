@@ -1,1 +1,182 @@
-abcd
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Addition Tool | PIVOT</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="binary_addition.css?v=4">
+</head>
+
+<body class="शरीरम्">
+    <header id="शीर्षपट्टिका">
+        <div id="चिह्नपात्रम्">
+            <a href="../../index.html">
+                <img src="../../home_page/company_logo.png" alt="PIVOT VLSI Institute Logo" id="चिह्नम्">
+            </a>
+        </div>
+        <ul id="मार्गसञ्चारकडी">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../home_page/contact.html">Contact us</a></li>
+        </ul>
+    </header>
+
+    <main class="मुख्यपात्रम्">
+        <div style="position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <h1 style="text-align: center; color: var(--मुख्य-पाठ्य); margin: 0; font-size: 1.5em; font-weight: bold;">
+                Binary Addition Tool
+            </h1>
+            <button id="faq-button" class="उपकरणकीलः" style="position: absolute; right: 20px;"><i class="fas fa-question-circle" id="faq-icon"></i> <span id="faq-text">FAQ</span></button>
+        </div>
+        
+        <div id="faq-container" style="display: none; padding: 20px; color: var(--मुख्य-पाठ्य); max-width: 800px; margin: 0 auto; overflow-y: auto; height: calc(100vh - 165px);">
+            <h2>Frequently Asked Questions: Binary Addition</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--नील-वर्ण); margin-bottom: 5px;">How do I add two binary numbers?</h3>
+                <p style="line-height: 1.6;">This tool teaches you the step-by-step process of adding two binary numbers using the Full Adder logic. First, you need to convert the given decimal numbers to binary. Then, fill out the Truth table. Finally, add the numbers bit by bit starting from the right (LSB).</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--नील-वर्ण); margin-bottom: 5px;">What is a Full Adder?</h3>
+                <p style="line-height: 1.6;">A full adder adds binary numbers and accounts for values carried in as well as out. It has three inputs (A, B, and Carry-in) and two outputs (Sum and Carry-out).</p>
+            </div>
+        </div>
+
+        <div id="tool-container">
+            <!-- Initial Generation Panel -->
+            <div id="सर्जन-पट्टिका" class="समस्या-पट्टिका">
+                <div class="समस्या-प्रदर्शनम्" style="display: flex; gap: 20px; width: 100%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <select id="दशमलव-प्रथम-चिह्नम्" class="समस्या-निवेशनम्" style="width: auto; padding: 10px; font-size: 1.2rem; cursor: pointer;">
+                            <option value="" selected disabled>Select</option>
+                            <option value="positive">Positive</option>
+                            <option value="negative">Negative</option>
+                        </select>
+                        <input type="text" id="दशमलव-प्रथम-मूल्यम्" class="समस्या-निवेशनम्" placeholder="Number A (Decimal)" style="text-align: center; width: 220px; padding: 10px; font-size: 1.2rem;">
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <select id="दशमलव-द्वितीय-चिह्नम्" class="समस्या-निवेशनम्" style="width: auto; padding: 10px; font-size: 1.2rem; cursor: pointer;">
+                            <option value="" selected disabled>Select</option>
+                            <option value="positive">Positive</option>
+                            <option value="negative">Negative</option>
+                        </select>
+                        <input type="text" id="दशमलव-द्वितीय-मूल्यम्" class="समस्या-निवेशनम्" placeholder="Number B (Decimal)" style="text-align: center; width: 220px; padding: 10px; font-size: 1.2rem;">
+                    </div>
+                    <button id="समस्या-सर्जन-कीलः" class="उपकरणकीलः"><i class="fas fa-random"></i> Generate numbers</button>
+                    <button id="ताला-कीलः" class="उपकरणकीलः" style="background-color: rgba(40, 167, 69, 0.8);"><i class="fas fa-unlock"></i> Lock</button>
+                </div>
+            </div>
+
+            <!-- Conversion Panel for Number A -->
+            <div id="रूपान्तरण-पट्टिका-१" class="समस्या-पट्टिका" style="display: none; flex-direction: column; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+                <div style="flex: 1; padding: 20px; position: relative;">
+                    <div style="text-align: center; font-size: 1.5rem; margin-bottom: 20px;">
+                        Decimal: <span id="वर्तमान-दशमलव-मूल्यम्-१" style="font-weight: bold; color: white;"></span>
+                    </div>
+                    
+                    <div style="display: flex; width: 100%; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 300px;">
+                            <div id="विभाजन-पात्रम्-१" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: monospace; font-size: 1.2rem;"></div>
+                            <button id="विभाजन-सत्यापन-कीलः-१" class="उपकरणकीलः" style="margin-top: 15px; padding: 6px 12px; font-size: 1rem;">Proceed <i class="fas fa-check"></i></button>
+                        </div>
+                        <div id="रूपान्तरण-दक्षिण-पटलम्-१" style="flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 300px;">
+                            <!-- Calculator A will be injected here -->
+                        </div>
+                    </div>
+
+                    <div id="पूरक-पात्रम्-१" style="display: none; width: 100%; margin-top: 20px; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; box-sizing: border-box;">
+                    </div>
+
+                    <div id="रूपान्तरण-अन्तिम-परिणामम्-१" style="width: 100%; display: none; flex-direction: column; align-items: center; margin-top: 20px; border-top: 1px solid var(--काच-सीमा); padding-top: 20px;">
+                    </div>
+                    
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button id="अग्रिम-चरण-कीलः-१" class="उपकरणकीलः" style="display: none; background-color: rgba(40, 167, 69, 0.8);">Next: Convert Number B <i class="fas fa-arrow-down"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversion Panel for Number B -->
+            <div id="रूपान्तरण-पट्टिका-२" class="समस्या-पट्टिका" style="display: none; flex-direction: column; width: 100%; max-width: 1000px; margin-bottom: 20px;">
+                <div style="flex: 1; padding: 20px; position: relative;">
+                    <div style="text-align: center; font-size: 1.5rem; margin-bottom: 20px;">
+                        Decimal: <span id="वर्तमान-दशमलव-मूल्यम्-२" style="font-weight: bold; color: white;"></span>
+                    </div>
+                    
+                    <div style="display: flex; width: 100%; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 300px;">
+                            <div id="विभाजन-पात्रम्-२" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: monospace; font-size: 1.2rem;"></div>
+                            <button id="विभाजन-सत्यापन-कीलः-२" class="उपकरणकीलः" style="margin-top: 15px; padding: 6px 12px; font-size: 1rem;">Proceed <i class="fas fa-check"></i></button>
+                        </div>
+                        <div id="रूपान्तरण-दक्षिण-पटलम्-२" style="flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 300px;">
+                            <!-- Calculator B will be injected here -->
+                        </div>
+                    </div>
+
+                    <div id="पूरक-पात्रम्-२" style="display: none; width: 100%; margin-top: 20px; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; box-sizing: border-box;">
+                    </div>
+
+                    <div id="रूपान्तरण-अन्तिम-परिणामम्-२" style="width: 100%; display: none; flex-direction: column; align-items: center; margin-top: 20px; border-top: 1px solid var(--काच-सीमा); padding-top: 20px;">
+                </div>
+                
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button id="अग्रिम-चरण-कीलः-२" class="उपकरणकीलः" style="display: none; background-color: rgba(40, 167, 69, 0.8);">Next: Binary Addition <i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+
+            <div class="उत्तर-पट्टिका" id="उत्तर-पट्टिका-पात्रम्" style="display: none;">
+                <div id="गणन-पटलम्" style="display: flex; width: 100%; gap: 30px; margin-top: 20px; align-items: flex-start; justify-content: center;">
+                    <div id="वाम-पटलम्" style="flex: 1; transition: all 0.5s ease; display: none; flex-direction: column; align-items: center; max-width: 800px;">
+                        <!-- Step by step interaction goes here -->
+                        <div id="पद-पात्रम्" style="width: 100%; display: flex; flex-direction: column; gap: 10px; align-items: center; padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                            
+                            <div id="वहन-पङ्क्ति-पात्रम्" style="display: none; width: 100%; justify-content: center; flex-direction: column; align-items: flex-end;">
+                                <div class="पद-पङ्क्ति-शीर्षकम्" style="padding-right: 40px; margin-bottom: -5px; color: gray; font-size: 0.8em;">Carry Row</div>
+                                <div id="वहन-पङ्क्ति" class="पद-पङ्क्ति" style="color: #ff9900;"></div>
+                            </div>
+                            
+                            <div id="प्रथम-पङ्क्ति" class="पद-पङ्क्ति"></div>
+                            
+                            <div style="position: relative; width: 100%;">
+                                <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 1.5rem;">+</span>
+                                <div id="द्वितीय-पङ्क्ति" class="पद-पङ्क्ति"></div>
+                            </div>
+                            
+                            <button id="अतिरिक्त-सत्यापन-कीलः" class="उपकरणकीलः" style="margin-top: 15px; background-color: rgba(40, 167, 69, 0.8);">Proceed</button>
+
+                            <div id="योग-पङ्क्ति-पात्रम्" style="display: none; width: 100%; flex-direction: column; align-items: flex-end;">
+                                <div style="width: 100%; border-bottom: 2px solid var(--काच-सीमा); margin: 10px 0;"></div>
+                                <div class="पद-पङ्क्ति-शीर्षकम्" style="padding-right: 40px; margin-bottom: -5px; color: gray; font-size: 0.8em;">Sum Row</div>
+                                <div id="योग-पङ्क्ति" class="पद-पङ्क्ति" style="color: #00d4ff;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="दक्षिण-पटलम्" style="flex: 1; display: flex; flex-direction: column; align-items: center; max-width: 380px;">
+                        <div class="सत्यता-सारणी-पात्रम्" style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 15px; text-align: center;">
+                            <h3 style="margin-top: 0; color: var(--नील-वर्ण);">Full Adder Truth Table</h3>
+                            <table class="सत्यता-सारणी">
+                                <tr><th>A</th><th>B</th><th>C<sub>in</sub></th><th>Sum</th><th>C<sub>out</sub></th></tr>
+                                <tr><td>0</td><td>0</td><td>0</td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>0</td><td>1</td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                            </table>
+                            <button id="सत्यता-सारणी-ताला-कीलः" class="उपकरणकीलः" style="margin-top: 15px; background-color: rgba(40, 167, 69, 0.8);"><i class="fas fa-check"></i> Verify Truth Table</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="binary_addition.js?v=7"></script>
+</body>
+</html>

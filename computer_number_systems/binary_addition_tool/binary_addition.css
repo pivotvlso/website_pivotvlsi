@@ -1,0 +1,484 @@
+:root {
+    --मुख्य-पृष्ठभूमि: #060b1a;
+    --नील-वर्ण: #00d4ff;
+    --काच-पृष्ठभूमि: rgba(255, 255, 255, 0.05);
+    --काच-सीमा: rgba(255, 255, 255, 0.1);
+    --मुख्य-पाठ्य: #f8fafc;
+    --त्रुटि-वर्ण: #ff4444;
+}
+
+body.शरीरम् {
+    margin: 0;
+    padding: 0;
+    background-color: var(--मुख्य-पृष्ठभूमि);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--मुख्य-पाठ्य);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#शीर्षपट्टिका {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    background: rgba(6, 11, 26, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--काच-सीमा);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+#चिह्नपात्रम् a {
+    display: flex;
+    align-items: center;
+}
+
+#चिह्नम् {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+#चिह्नम्:hover {
+    transform: scale(3);
+    transform-origin: top left;
+}
+
+#मार्गसञ्चारकडी {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#मार्गसञ्चारकडी a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+    color: var(--मुख्य-पाठ्य);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.मुख्यपात्रम् {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.समस्या-पट्टिका {
+    background: var(--काच-पृष्ठभूमि);
+    border: 1px solid var(--काच-सीमा);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.समस्या-निवेशनम् {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--नील-वर्ण);
+    border: 1px solid var(--काच-सीमा);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+select.समस्या-निवेशनम् option {
+    background-color: var(--मुख्य-पृष्ठभूमि, #060b1a);
+    color: var(--नील-वर्ण, #00d4ff);
+}
+
+.उपकरणकीलः:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--नील-वर्ण);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.उपकरणकीलः:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.सत्यता-सारणी {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.सत्यता-सारणी th, .सत्यता-सारणी td {
+    border: 1px solid var(--काच-सीमा);
+    padding: 8px;
+    text-align: center;
+}
+
+.सत्यता-सारणी th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.fa-input {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--मुख्य-पाठ्य);
+    border: 1px solid var(--काच-सीमा);
+    width: 30px;
+    text-align: center;
+    padding: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.fa-input.त्रुटि {
+    border-color: var(--त्रुटि-वर्ण);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.fa-input.सम्यक् {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    background: rgba(0, 255, 0, 0.1);
+}
+
+/* Step-by-step styles */
+.पद-पङ्क्ति {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-family: monospace;
+    justify-content: flex-end; /* Align right to left */
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.पद-निवेशनम् {
+    width: 35px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--मुख्य-पाठ्य);
+    border: 1px solid var(--काच-सीमा);
+    text-align: center;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.पद-निवेशनम्:read-only {
+    background: transparent;
+    border: none;
+}
+
+.पद-निवेशनम्.त्रुटि {
+    border-color: var(--त्रुटि-वर्ण);
+    color: var(--त्रुटि-वर्ण);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.पद-निवेशनम्.सम्यक् {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.त्रुटि-प्रकाशः {
+    border-color: var(--त्रुटि-वर्ण, #ff5252) !important;
+    background-color: rgba(255, 82, 82, 0.1) !important;
+}
+
+.साफल्य-प्रकाशः {
+    border-color: #4caf50 !important;
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Result specific styling */
+.परिणाम-सन्देश {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-align: center;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    #गणन-पटलम् {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    #वाम-पटलम्, #दक्षिण-पटलम् {
+        max-width: 100% !important;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #पद-पात्रम् {
+        overflow-x: auto;
+        width: 100%;
+        max-width: 90vw;
+        box-sizing: border-box;
+        padding: 10px !important;
+    }
+
+    .पद-पङ्क्ति {
+        gap: 5px;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+    
+    .पद-निवेशनम्, input.पद-निवेशनम् {
+        width: 25px !important;
+        height: 35px !important;
+        font-size: 1.2rem !important;
+    }
+
+    /* Final result block */
+    .परिणाम-सन्देश {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
+
+.वहन-निवेशनम्:read-only:not(.सम्यक्), .योग-निवेशनम्:read-only:not(.सम्यक्), .वहन-निवेशनम्[readonly]:not(.सम्यक्), .योग-निवेशनम्[readonly]:not(.सम्यक्) {
+    border: 2px dashed rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Guaranteed visibility for active inputs */
+.वहन-निवेशनम्:not([readonly]), .योग-निवेशनम्:not([readonly]),
+.वहन-निवेशनम्:not(:read-only), .योग-निवेशनम्:not(:read-only) {
+    background: rgba(37, 99, 235, 0.5) !important;
+    border: 2px solid #3b82f6 !important;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.द्विचर-निवेशनम्.त्रुटि {
+    border-color: var(--त्रुटि-वर्ण);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+    color: var(--त्रुटि-वर्ण);
+}
+
+.द्विचर-निवेशनम्.सम्यक् {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    color: #00ff00;
+    background: rgba(0, 255, 0, 0.1) !important;
+}
+
+.उपकरणकीलः {
+    background: transparent;
+    border: 1px solid var(--काच-सीमा);
+    color: var(--मुख्य-पाठ्य);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.उपकरणकीलः:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--नील-वर्ण);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.उपकरणकीलः:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.सत्यता-सारणी {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.सत्यता-सारणी th, .सत्यता-सारणी td {
+    border: 1px solid var(--काच-सीमा);
+    padding: 8px;
+    text-align: center;
+}
+
+.सत्यता-सारणी th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.fa-input {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--मुख्य-पाठ्य);
+    border: 1px solid var(--काच-सीमा);
+    width: 30px;
+    text-align: center;
+    padding: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.fa-input.त्रुटि {
+    border-color: var(--त्रुटि-वर्ण);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.fa-input.सम्यक् {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    background: rgba(0, 255, 0, 0.1);
+}
+
+/* Step-by-step styles */
+.पद-पङ्क्ति {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-family: monospace;
+    justify-content: flex-end; /* Align right to left */
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.पद-निवेशनम् {
+    width: 35px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--मुख्य-पाठ्य);
+    border: 1px solid var(--काच-सीमा);
+    text-align: center;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.पद-निवेशनम्:read-only {
+    background: transparent;
+    border: none;
+}
+
+.पद-निवेशनम्.त्रुटि {
+    border-color: var(--त्रुटि-वर्ण);
+    color: var(--त्रुटि-वर्ण);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.पद-निवेशनम्.सम्यक् {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.त्रुटि-प्रकाशः {
+    border-color: var(--त्रुटि-वर्ण, #ff5252) !important;
+    background-color: rgba(255, 82, 82, 0.1) !important;
+}
+
+.साफल्य-प्रकाशः {
+    border-color: #4caf50 !important;
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Result specific styling */
+.परिणाम-सन्देश {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-align: center;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    #गणन-पटलम् {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    #वाम-पटलम्, #दक्षिण-पटलम् {
+        max-width: 100% !important;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #पद-पात्रम् {
+        overflow-x: auto;
+        width: 100%;
+        max-width: 90vw;
+        box-sizing: border-box;
+        padding: 10px !important;
+    }
+
+    .पद-पङ्क्ति {
+        gap: 5px;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+    
+    .पद-निवेशनम्, input.पद-निवेशनम् {
+        width: 25px !important;
+        height: 35px !important;
+        font-size: 1.2rem !important;
+    }
+
+    /* Final result block */
+    .परिणाम-सन्देश {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
+
+.वहन-निवेशनम्:read-only:not(.सम्यक्), .योग-निवेशनम्:read-only:not(.सम्यक्), .वहन-निवेशनम्[readonly]:not(.सम्यक्), .योग-निवेशनम्[readonly]:not(.सम्यक्) {
+    border: 2px dashed rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Guaranteed visibility for active inputs */
+.वहन-निवेशनम्:not([readonly]), .योग-निवेशनम्:not([readonly]),
+.वहन-निवेशनम्:not(:read-only), .योग-निवेशनम्:not(:read-only) {
+    background: rgba(37, 99, 235, 0.5) !important;
+    border: 2px solid #3b82f6 !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 2px black !important;
+}
+
+/* Ensure text is always white in all grid inputs */
+input.पद-निवेशनम् {
+    color: #ffffff !important;
+}
