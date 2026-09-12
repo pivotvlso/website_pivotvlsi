@@ -1,0 +1,219 @@
+/* CSS for Signed Number Practice Tool */
+/* --- Global Theme & Base Styling --- */
+:root {
+    --पृष्ठभूमि-अन्धकार: #060b1a;
+    --नील-वर्ण: #00d4ff;
+    --काच-पृष्ठभूमि: rgba(255, 255, 255, 0.05);
+    --काच-सीमा: rgba(255, 255, 255, 0.1);
+    --मुख्य-पाठ्य: #f8fafc;
+}
+
+body.शरीरम् {
+    margin: 0;
+    padding: 0;
+    background-color: var(--पृष्ठभूमि-अन्धकार);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--मुख्य-पाठ्य);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* --- Navigation Header --- */
+#शीर्षपट्टिका {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    background: rgba(6, 11, 26, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--काच-सीमा);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+#चिह्नपात्रम् a {
+    display: flex;
+    align-items: center;
+}
+
+#चिह्नम् {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+#चिह्नम्:hover {
+    transform: scale(3);
+    transform-origin: top left;
+}
+
+#मार्गसञ्चारकडी {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#मार्गसञ्चारकडी a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#मार्गसञ्चारकडी a:hover {
+    color: yellow;
+    transform: translateY(-2px) scale(1.05);
+    display: inline-block;
+}
+
+/* --- Base Layout & Components --- */
+.मुख्यपात्रम् {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    width: 100%;
+}
+
+.उपकरणकीलः {
+    background: transparent;
+    border: 1px solid var(--काच-सीमा);
+    color: var(--मुख्य-पाठ्य);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.उपकरणकीलः:hover {
+    background: var(--नील-वर्ण);
+    color: #060b1a;
+    border-color: var(--नील-वर्ण);
+}
+
+
+.सारणी-पात्रम् {
+    margin-top: 5px;
+    padding: 0 20px 20px 20px;
+    height: calc(100vh - 165px);
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#अभ्याससारणी {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--काच-पृष्ठभूमि);
+}
+
+#अभ्याससारणी td {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+}
+
+#अभ्याससारणी th {
+    background-color: #1e1e1e;
+    color: var(--मुख्य-पाठ्य);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#अभ्याससारणी td:first-child,
+#अभ्याससारणी th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: #1e1e1e;
+}
+
+#अभ्याससारणी th:first-child {
+    z-index: 15;
+}
+
+.अभ्यासनिवेशनम् {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    color: var(--मुख्य-पाठ्य);
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.अभ्यासनिवेशनम्:focus {
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.उपकरणपट्टिका {
+    padding: 0 20px 10px 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--काच-सीमा);
+    display: flex;
+    align-items: center;
+}
+
+.त्रुटि-निवेशनम् {
+    background-color: rgba(255, 77, 77, 0.3) !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #शीर्षपट्टिका {
+        padding: 5px 10px;
+    }
+    
+    #मार्गसञ्चारकडी {
+        gap: 10px;
+        font-size: 0.85em;
+    }
+    
+    .उपकरणपट्टिका {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    #परीक्षणकीलः, #faq-button {
+        position: static !important;
+        width: 100%;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    #पृष्ठशीर्षकम् {
+        font-size: 1.2em !important;
+    }
+    
+    .सारणी-पात्रम् {
+        padding: 0 5px 10px 5px;
+    }
+    
+    #अभ्याससारणी th {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+    
+    .अभ्यासनिवेशनम् {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
