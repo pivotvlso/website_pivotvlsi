@@ -1,1 +1,96 @@
-acd
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2's Complement Conversion | PIVOT VLSI</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="twos_complement_conversion_tool.css">
+</head>
+
+<body class="शरीरम्">
+    <header id="शीर्षपट्टिका">
+        <div id="चिह्नपात्रम्">
+            <a href="../../index.html">
+                <img src="../../home_page/company_logo.png" alt="PIVOT VLSI Institute Logo" id="चिह्नम्">
+            </a>
+        </div>
+        <ul id="मार्गसञ्चारकडी">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../home_page/contact.html">Contact us</a></li>
+        </ul>
+    </header>
+
+    <main class="मुख्यपात्रम्">
+        <div style="position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <h1 style="text-align: center; color: var(--मुख्य-पाठ्य); margin: 0; font-size: 1.5em; font-weight: bold;">
+                2's Complement Conversion
+            </h1>
+            <button id="faq-button" class="उपकरणकीलः" style="position: absolute; right: 20px;"><i class="fas fa-question-circle" id="faq-icon"></i> <span id="faq-text">FAQ</span></button>
+        </div>
+        
+        <div id="faq-container" style="display: none; padding: 20px; color: var(--मुख्य-पाठ्य); max-width: 800px; margin: 0 auto; overflow-y: auto; height: calc(100vh - 165px);">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--नील-वर्ण); margin-bottom: 5px;">How do I find the 2's complement of a binary number?</h3>
+                <p style="line-height: 1.6;">Finding the 2's complement is a two-step mathematical process used to represent negative numbers in computers:</p>
+                <ol style="line-height: 1.6; margin-top: 10px; padding-left: 20px;">
+                    <li><strong>Find the 1's Complement:</strong> Invert every bit in the binary number (change 1s to 0s, and 0s to 1s).</li>
+                    <li><strong>Add 1:</strong> Add 1 to the Least Significant Bit (LSB - the rightmost bit) of the 1's complement.</li>
+                </ol>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--नील-वर्ण); margin-bottom: 5px;">What if there is a carry during addition?</h3>
+                <p style="line-height: 1.6;">When adding 1 to the rightmost bit, remember your binary addition rules: <code>1 + 1 = 10</code> (which is 0, carry 1). You must carry the 1 to the next column to the left until you resolve all additions.</p>
+            </div>
+        </div>
+
+        <div id="tool-container">
+            <div class="समस्या-पट्टिका">
+                <div class="समस्या-प्रदर्शनम्">
+                    <input type="text" id="समस्या-मूल्यम्" class="समस्या-निवेशनम्" placeholder="Binary Number" readonly>
+                </div>
+
+                <div class="कील-समूहः">
+                    <button id="समस्या-सर्जन-कीलः" class="उपकरणकीलः"><i class="fas fa-random"></i> Generate problem</button>
+                    <button id="समस्या-ताला-कीलः" class="उपकरणकीलः" style="display: none; background-color: rgba(40, 167, 69, 0.8);"><i class="fas fa-lock"></i> Lock</button>
+                </div>
+            </div>
+
+            <div class="उत्तर-पट्टिका">
+                <div id="गणन-पटलम्" style="display: flex; width: 100%; gap: 30px; margin-top: 20px; align-items: flex-start; justify-content: center;">
+                    <div id="वाम-पटलम्" style="flex: 1; transition: all 0.5s ease; display: none; flex-direction: column; align-items: center; max-width: 800px;">
+                        <!-- Step by step interaction goes here -->
+                        <div id="पद-पात्रम्" style="width: 100%; display: flex; flex-direction: column; gap: 15px; align-items: center; padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                            <!-- JS will inject the 3 rows here dynamically -->
+                        </div>
+                    </div>
+
+                    <div id="दक्षिण-पटलम्" style="flex: 1; display: none; flex-direction: column; align-items: center; max-width: 380px;">
+                        <div class="सत्यता-सारणी-पात्रम्" style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 15px; text-align: center;">
+                            <h3 style="margin-top: 0; color: var(--नील-वर्ण);">Full Adder Truth Table</h3>
+                            <table class="सत्यता-सारणी">
+                                <tr><th>A</th><th>B</th><th>C<sub>in</sub></th><th>Sum</th><th>C<sub>out</sub></th></tr>
+                                <tr><td>0</td><td>0</td><td>0</td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>0</td><td>1</td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="0" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="0" data-b="1" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="0" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="0" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="0" data-type="carry" maxlength="1"></td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="1" data-type="sum" maxlength="1"></td><td><input type="text" class="fa-input" data-a="1" data-b="1" data-c="1" data-type="carry" maxlength="1"></td></tr>
+                            </table>
+                            <button id="सत्यता-सारणी-ताला-कीलः" class="उपकरणकीलः" style="margin-top: 15px; background-color: rgba(40, 167, 69, 0.8);"><i class="fas fa-check"></i> Verify Truth Table</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="twos_complement_conversion_tool.js" charset="utf-8"></script>
+</body>
+</html>
