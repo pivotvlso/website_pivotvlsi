@@ -11,9 +11,54 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://pivotvlsi.in/home_page/contact.html</loc>
+      <loc>https://pivotvlsi.in/boolean_algebra/boolean_algebra.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/binary_addition_tool/binary_addition.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/conversion_tool/conversion_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/courses/syllabus.html</loc>
       <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/gray_code_conversion_tool/gray_code_conversion_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/gray_code_practice_tool/gray_code_practice_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/signed_number_practice_tool/signed_number_practice_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/signed_odometer_tool/signed_odometer_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/twos_complement_conversion_tool/twos_complement_conversion_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/computer_number_systems/writing_practice_tool/writing_practice_tool.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://pivotvlsi.in/educational_program/educational_program.html</loc>
@@ -26,14 +71,9 @@
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://pivotvlsi.in/computer_number_systems/conversion_tool/conversion_tool.html</loc>
-      <changefreq>yearly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://pivotvlsi.in/computer_number_systems/writing_practice_tool/writing_practice_tool.html</loc>
-      <changefreq>yearly</changefreq>
-      <priority>1.0</priority>
+      <loc>https://pivotvlsi.in/home_page/contact.html</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
    </url>
    <url>
       <loc>https://pivotvlsi.in/schematic/schematic.html</loc>
@@ -42,6 +82,11 @@
    </url>
    <url>
       <loc>https://pivotvlsi.in/timing_diagram/timing_diagram.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://pivotvlsi.in/truth_table/truth_table.html</loc>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
