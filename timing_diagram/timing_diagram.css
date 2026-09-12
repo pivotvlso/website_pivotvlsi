@@ -13,7 +13,7 @@ body.शरीरम् {
     background-color: var(--bg-dark);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-primary);
-    overflow: hidden;
+    overflow-x: hidden; overflow-y: auto;
     height: 100vh;
 }
 
@@ -86,7 +86,7 @@ body.शरीरम् {
 .खण्डसमूहः {
     display: flex;
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden; overflow-y: auto;
     width: 100%;
 }
 
@@ -266,7 +266,7 @@ body.शरीरम् {
     font-weight: bold;
     font-size: 0.9rem;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-x: hidden; overflow-y: auto;
     text-overflow: ellipsis;
     height: 40px;
     box-sizing: border-box;
@@ -302,7 +302,7 @@ body.शरीरम् {
     top: 0;
     z-index: 10;
     background: var(--bg-dark);
-    overflow: hidden;
+    overflow-x: hidden; overflow-y: auto;
 }
 
 .कालचिह्नम् {
@@ -380,4 +380,55 @@ body.शरीरम् {
 .सङ्केतकर्षितः {
     opacity: 0.5;
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #030610;
+    padding: 40px 5% 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    color: #00d4ff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #cbd5e1;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
 }
