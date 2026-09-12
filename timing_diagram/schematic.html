@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSI Schematic Tool | PIVOT VLSI</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Design and learn with PIVOT VLSI's interactive Schematic Tool. Build, edit, and simulate VLSI circuits in your browser.">
+    <meta name="keywords" content="VLSI Schematic Tool, Circuit Design, Online Schematic Editor, Semiconductor Education, PIVOT VLSI">
+    <meta name="author" content="PIVOT">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="VLSI Schematic Tool | PIVOT VLSI">
+    <meta property="og:description" content="Interactive Schematic Tool for designing and simulating VLSI circuits online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pivotvlsi.in/schematic/schematic.html">
+    <meta property="og:image" content="https://pivotvlsi.in/home_page/company_logo.png">
+    
+    <!-- Twitter Card Data -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pivotvlsi.in/schematic/schematic.html">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="schematic.css">
+</head>
+
+<body>
+    <header id="शीर्षपट्टिका">
+
+        <div id="चिह्नपात्रम्">
+            <img src="../home_page/company_logo.png" alt="PIVOT VLSI Institute Logo" id="चिह्नम्">
+        </div>
+        <ul id="मार्गसञ्चारकडी">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../educational_program/educational_program.html#चलच्चित्र-विभागः">Courses</a></li>
+            <li><a href="../educational_program/educational_program.html#साक्षात्कार-उपकरणानि">Codelabs</a></li>
+            <li><a href="../about_us/about_us.html">About</a></li>
+            <li><a href="../home_page/contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <h1 style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Interactive VLSI Schematic Design Tool</h1>
+
+    <!-- The new layout container -->
+    <div id="मुख्यपात्रम्">
+        <div id="उपकरणपट्टिका">
+            <button class="उपकरणकुञ्जिका" id="सामान्यकुञ्जिका" title="Normal (Esc)"><i
+                    class="fa-solid fa-arrow-pointer"></i></button>
+            <button class="उपकरणकुञ्जिका" id="प्रतिकृतिकुञ्जिका" title="Copy (C)"><i
+                    class="fa-solid fa-copy"></i></button>
+            <button class="उपकरणकुञ्जिका" id="शोधनकुञ्जिका" title="Delete (Del)">❌</button>
+            <button class="उपकरणकुञ्जिका" id="भ्रमणकुञ्जिका" title="Rotate 90° (R)"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="उपकरणकुञ्जिका" id="प्रतिबिम्बकुञ्जिका" title="Vertical Flip (V)"><i class="fa-solid fa-arrows-up-down"></i></button>
+            <button class="उपकरणकुञ्जिका" id="विस्तारकुञ्जिका" title="Zoom In (Z)"><i
+                    class="fa-solid fa-magnifying-glass-minus"></i></button>
+            <button class="उपकरणकुञ्जिका" id="संकोचकुञ्जिका" title="Zoom Out (Shift + Z)"><i
+                    class="fa-solid fa-magnifying-glass-plus"></i></button>
+            <input type="text" id="विस्तारप्रतिशतम्" value="100">
+            <span id="प्रतिशतचिह्नम्">%</span>
+            <button class="उपकरणकुञ्जिका" id="अनुकूलविस्तारकुञ्जिका" title="Zoom Fit (F)"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="कार्यक्षेत्रम्">
+            <div id="तर्कद्वारपट्टिका">
+                <button class="उपकरणकुञ्जिका" id="तन्तुकुञ्जिका" title="Wire (W)" draggable="true"><canvas
+                        id="तन्तुचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="कीलककुञ्जिका" title="Pin (P)"><canvas
+                        id="कीलकचिह्नम्" width="24" height="24"></canvas></button>
+                                <button class="उपकरणकुञ्जिका" id="संयोगद्वारकुञ्जिका" title="AND" draggable="true"><canvas
+                        id="संयोगद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विकल्पद्वारकुञ्जिका" title="OR" draggable="true"><canvas
+                        id="विकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नद्वारकुञ्जिका" title="NOT" draggable="true"><canvas
+                        id="नद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नसंयोगद्वारकुञ्जिका" title="NAND" draggable="true"><canvas
+                        id="नसंयोगद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="नविकल्पद्वारकुञ्जिका" title="NOR" draggable="true"><canvas
+                        id="नविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विशिष्टविकल्पद्वारकुञ्जिका" title="XOR" draggable="true"><canvas
+                        id="विशिष्टविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+                <button class="उपकरणकुञ्जिका" id="विशिष्टनविकल्पद्वारकुञ्जिका" title="XNOR" draggable="true"><canvas
+                        id="विशिष्टनविकल्पद्वारचिह्नम्" width="24" height="24"></canvas></button>
+            </div>
+            <div id="पट्टिकाविभाजकः"></div>
+            <div id="पटपात्रम्">
+                <div id="पटस्तरपात्रम्">
+                    <canvas id="बिन्दुपटः"></canvas>
+                    <canvas id="तर्कद्वारपटः"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pin Creation Dialog -->
+    <div id="कीलकसंवादपृष्ठभूमिः" class="संवादपृष्ठभूमिः गुप्तम्">
+        <div id="कीलकसंवादपेटिका" class="संवादपेटिका">
+            <h2>Create Pin</h2>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="कीलकनाम">Name:</label>
+                <input type="text" id="कीलकनाम" placeholder="e.g. IN1, CLK" maxlength="10" autocomplete="off">
+            </div>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="कीलकदिशा">Direction:</label>
+                <select id="कीलकदिशा">
+                    <option value="निवेशः">Input</option>
+                    <option value="निर्गमः">Output</option>
+                </select>
+            </div>
+            <div class="संवाद-कुञ्जिका-पङ्क्तिः">
+                <button id="कीलक_रद्दकुञ्जिका" class="संवाद-कुञ्जिका रद्द-कुञ्जिका">Cancel</button>
+                <button id="कीलक_स्वीकारकुञ्जिका" class="संवाद-कुञ्जिका स्वीकार-कुञ्जिका">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- Gate Creation Dialog -->
+    <div id="द्वारसंवादपृष्ठभूमिः" class="संवादपृष्ठभूमिः गुप्तम्">
+        <div id="द्वारसंवादपेटिका" class="संवादपेटिका">
+            <h2>Create Gate</h2>
+            <div class="संवाद-पङ्क्तिः">
+                <label for="द्वारनाम">Name:</label>
+                <input type="text" id="द्वारनाम" placeholder="e.g. U1, U2" maxlength="10" autocomplete="off">
+            </div>
+            <div class="संवाद-कुञ्जिका-पङ्क्तिः">
+                <button id="द्वार_रद्दकुञ्जिका" class="संवाद-कुञ्जिका रद्द-कुञ्जिका">Cancel</button>
+                <button id="द्वार_स्वीकारकुञ्जिका" class="संवाद-कुञ्जिका स्वीकार-कुञ्जिका">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/schematic_globals.js"></script>
+    <script src="js/schematic_icons.js"></script>
+    <script src="js/schematic_routing.js"></script>
+    <script src="js/schematic_gates.js"></script>
+    <script src="js/schematic_events.js"></script>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>PIVOT VLSI</h4>
+                <p>Elevating your potential through premier educational programs.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="../educational_program/educational_program.html#चलच्चित्र-विभागः">Courses</a>
+                <a href="../educational_program/educational_program.html#साक्षात्कार-उपकरणानि">Codelabs</a>
+                <a href="../about_us/about_us.html">About</a>
+                <a href="../home_page/contact.html">Contact</a>
+                <a href="../sitemap.xml">Sitemap</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@pivotvlsi.in</p>
+                <div style="margin-top: 15px; display: flex; gap: 15px;">
+                    <a href="https://www.youtube.com/@PIVOT-vlsi" target="_blank" rel="noopener noreferrer" style="color: #ff0000; display: inline-flex; align-items: center; transition: 0.3s;" onmouseover="this.style.transform=\'scale(1.2)\'" onmouseout="this.style.transform=\'scale(1)\'" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/pivot-vlsi/" target="_blank" rel="noopener noreferrer" style="color: #0077b5; display: inline-flex; align-items: center; transition: 0.3s;" onmouseover="this.style.transform=\'scale(1.2)\'" onmouseout="this.style.transform=\'scale(1)\'" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PIVOT VLSI. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
